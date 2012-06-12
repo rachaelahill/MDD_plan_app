@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>VayPlay</title>
+	<meta charset="utf-8">
+	
+	<!-- Mobile viewport optimization h5bp.com/ad -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width,maximum-scale=1.0" />
+
+	<!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+	<!-- iPhone 4+(Retina) -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon.png">
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+	<!-- For nokia devices: -->
+	<link rel="shortcut icon" href="images/apple-touch-icon.png">
+	
+
+	<!-- iOS web app, delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
+
+	<!-- JQueryMobile Framework -->
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/themes/custom-theme01.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+<body>
+	<article id="splash" data-role="page" data-theme="a">
+		<img src="images/MDD_logo.png" />
+		<section data-role="content">
+			<form action="#home" method="post" id="authenticate">
+				<label for="username">Username:</label><input type="text" name="username" id="userInput">
+				<label for="password">Password:</label><input type="password" name="password" id="passInput">
+				<a href="#">new user?</a><a href="#">forgot your password?</a>
+				<p><input type="submit" value="Login"></p>
+			</form>
+		</section>
+	</article>
+
+	<article id="home" data-role="page" data-theme="a">
+		<header data-role="header">
+			<h2>Plans</h2>
+		</header>
+		<section data-role="content">
+			<select name="filter" id="filter" data-shadow="false" data-corners="false">
+				<option value="recent">most recent</option>
+				<option value="all">all</option>
+				<option value="rated">highest rated</option>
+				<option value="geolocation">near me</option>
+			</select>
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search items...">
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+				<li><a href="#detail">
+					<h3>gettin biz in the diz</h3>
+					<p>Walt Disney World</p>
+				</a></li>
+			</ul>
+		</section>
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home">Plans</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#create-1">Create</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</article>
+
+	<article id="detail" data-role="page" data-theme="a">
+		<header data-role="header">
+			<a data-rel="back">back</a>
+			<h2>gettin biz in the diz</h2>
+			<a href="#" data-role="button" data-icon="star" data-iconpos="notext"
+			data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true"
+			data-wrapperIs="span" title="favorite"></a>
+		</header>
+		<section data-role="content">
+			<div class="plan-heading">
+				<p>Walt Disney World is so cool stuff</p>
+				<p><a href="#">geolocation</a></p>
+			</div>
+			<a href="#plan-details" data-role="button" data-icon="arrow-r" data-iconpos="right">Plan Details</a>
+			<p class="plan-body">
+				Get to Hollywood Studios first and immediately run to Toy Story Mania when the park opens. Grab a FastPass, then jump in the regular line (no FastPass). As soon as you get out, use your FastPass to go back through again! After TSM, walk on over to Rockin’ Rollercoaster and get in line to scream with Steven Tyler & Aerosmith. Don’t bother riding this if you get motion sickness at all... Once you’re out of RR, head toward Tower of Terror nearby and spend some quality time with Rod and the gang 199 ft up. Again, do avoid this if you’re prone to motion sickness! At this point, if you’ve moved quickly and not wasted time, it should be midmorning and about time to have a snack. I strongly recommend Starring Rolls (near RR)  for a quick bite!
+			</p>
+		</section>
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home">Plans</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#create-1">Create</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</article>
+
+	<article id="plan-details" data-role="page" data-theme="a">
+		<header data-role="header">
+			<a data-rel="back">back</a>
+			<h2>gettin biz in the diz</h2>
+		</header>
+		<section data-role="content">
+			<div class="plan-heading">
+				<p>Walt Disney World</p>
+				<p><a href="#">geolocation</a></p>
+			</div>
+			<span>Details</span>
+			<div class="plan-details text-group">
+				<ul>
+					<li>
+						<p>Plan Creator</p>
+						<p><a href="#">Grant Standridge</a></p>
+					</li>
+					<li>
+						<p># of people</p>
+						<p>3</p>
+					</li>
+					<li>
+						<p>Plan length</p>
+						<p>3 days</p>
+					</li>
+					<li>
+						<p>Plan type</p>
+						<p>family-friendly</p>
+					</li>
+					<li>
+						<p>Group type</p>
+						<p>pleasure</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home">Plans</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#create-1">Create</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</article>
+
+	<article id="profile" data-role="page" data-theme="a">
+		<header data-role="header">
+			<h2>Profile</h2>
+		</header>
+		<section data-role="content">
+			<h3>Grant Standridge</h3>
+			<div class="text-group">
+				<ul>
+					<li>
+						<p>Location</p>
+						<p>Winter Park, FL</p>
+					</li>
+					<li>
+						<p>Age</p>
+						<p>25</p>
+					</li>
+				</ul>
+			</div>
+			<div data-role="controlgroup">
+				<a href="#" style="text-align:left;" data-role="button" data-icon="arrow-r" data-iconpos="right">My Plans</a>
+				<a href="#" style="text-align:left;" data-role="button" data-icon="arrow-r" data-iconpos="right">Favorite Plans</a>
+			</div>
+			<div data-role="controlgroup">
+				<a href="#" style="text-align:left;" data-role="button" data-icon="arrow-r" data-iconpos="right">Facebook</a>
+				<a href="#" style="text-align:left;" data-role="button" data-icon="arrow-r" data-iconpos="right">Twitter</a>
+			</div>
+		</section>
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home">Plans</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#create-1">Create</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</article>
+
+	<article id="create-1" data-role="page" data-theme="a">
+		<header data-role="header">
+			<h2>New Plan</h2>
+		</header>
+		<section data-role="content">
+			<form action="#create-2" method="post" id="create-new-plan">
+				<label for="new-plan-name">What's this plan's name?</label>
+				<input type="text" id="new-plan-name" name="new-plan-name" />
+				<label for="new-plan-location">Where were you?</label>
+				<input type="text" id="new-plan-location" name="new-plan-location" />
+				<label for="new-plan-duration">How long were you there?</label>
+				<select id="new-plan-duration" name="new-plan-duration">
+					<option value="<1">less than 1 day</option>
+					<option value="1">1 day</option>
+					<option value="2">2 days</option>
+					<option value="3">3 days</option>
+					<option value="4">4 days</option>
+					<option value="5">5 days</option>
+					<option value="6">6 days</option>
+					<option value="7">7 days</option>
+					<option value=">7">longer than a week</option>
+				</select>
+				<label for="new-plan-numpeople">How many people were you with?</label>
+				<select id="new-plan-numpeople" name="new-plan-numpeople">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value=">5">more than 5</option>
+				</select>
+				<label for="new-plan-type">What kind of plan was this?</label>
+				<select id="new-plan-type" name="new-plan-type">
+					<option value="family-friendly">family-friendly</option>
+					<option value="adult">adult</option>
+					<option value="pleasure">pleasure</option>
+					<option value="business">business</option>
+					<option value="romantic">romantic</option>
+					<option value="children">children</option>
+				</select>
+				<label for="new-plan-about">Tell us about your plan!</label>
+				<textarea id="new-plan-about"></textarea>
+				<input type="submit" value="Submit!" />
+			</form>
+		</section>
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home">Plans</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#create">Create</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</article>
+
+	<article id="create-2" data-role="page" data-theme="a">
+		<header data-role="header">
+			<a data-rel="back">back</a>
+			<h2>Review Plan</h2>
+		</header>
+		<section data-role="content">
+			<div class="text-group">
+				<ul>
+					<li>
+						<p>Name</p>
+						<p>gettin biz in the diz</p>
+					</li>
+					<li>
+						<p>Location</p>
+						<p>Walt Disney World</p>
+					</li>
+					<li>
+						<p>Duration</p>
+						<p>1 day</p>
+					</li>
+					<li>
+						<p># of people</p>
+						<p>1</p>
+					</li>
+					<li>
+						<p>Kind</p>
+						<p>pleasure</p>
+					</li>
+				</ul>
+			</div>
+			<p class="new-plan-body">
+			Get to Hollywood Studios first and immediately run to Toy Story Mania when the park opens. Grab a FastPass, then jump in the regular line (no FastPass). As soon as you get out, use your FastPass to go back through again! After TSM, walk on over to Rockin’ Rollercoaster and get in line to scream with Steven Tyler & Aerosmith. Don’t bother riding this if you get motion sickness at all... Once you’re out of RR, head toward Tower of Terror nearby and spend some quality time with Rod and the gang 199 ft up. Again, do avoid this if you’re prone to motion sickness! At this point, if you’ve moved quickly and not wasted time, it should be midmorning and about time to have a snack. I strongly recommend Starring Rolls (near RR)  for a quick bite!
+			</p>
+			<button class="new-plan-btn-submit">Submit!</button>
+		</section>
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home">Plans</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#create">Create</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</article>
+
+<script src="js/script.js"></script>
+</html>
